@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-  var picOfWeek, quoteOfWeek, author;
-
   var quoteArray = [
     {
     "quote": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea iusto veniam maiores deleniti itaque, hic doloribus reiciendis esse unde. Ipsa aspernatur impedit vero quos numquam nesciunt alias, fugiat consequatur quod.",
@@ -21,9 +19,8 @@ $(document).ready(function(){
 
   var changeQuote = function(){
     var q = _.sample(quoteArray);
-
-    quoteOfWeek = q.quote;
-    author = q.author;
+    var quoteOfWeek = q.quote;
+    var author = q.author;
     $('#qWeek').html(quoteOfWeek);
     $('#qAuthor').html(author);
   }
@@ -42,7 +39,7 @@ $(document).ready(function(){
     }).done(function(json){
             var rand = Math.floor(Math.random() * json.responseData.results.length),
           results = json.responseData.results;
-          picOfWeek =  results[rand].url;
+          var picOfWeek =  results[rand].url;
           $('#picWeek').attr("src", picOfWeek);
     });
   }
