@@ -1,0 +1,198 @@
+*{
+  box-sizing: border-box;
+  font-family: Arial;
+  margin: 0 auto;
+}
+
+#container{
+  width: 66%;
+  height: 100%;
+  background: rgb(204, 204, 204);
+  padding-right: 5px;
+}
+
+
+header{
+  padding:5px;
+  padding-bottom: 2%;
+}
+
+/* Top heading */
+h1{
+  color: white;
+  height: 150px;
+  text-align: center;
+  background: rgb(57, 149, 255);
+  line-height: 150px;
+  border-bottom: 10px solid rgb(28, 49, 75);
+}
+/* Top heading end */
+
+
+
+/* Navigation bar */
+
+ul{
+  background: white;
+  padding-left: 10px;
+}
+
+li{
+  font-size: 0.8em;
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+li:hover{
+  background: rgb(28, 49, 75);
+  color:white;
+}
+
+/* Navigation bar end */
+
+
+
+/*contents*/
+
+#content{
+  width: 100%;
+  hight: 100%;
+  padding: 5px;
+  padding-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+/*left side content*/
+
+#left-container{
+  width: 65%;
+}
+
+#left-container h3{
+  color: rgb(36, 140, 254);
+}
+
+div.posts{
+  margin: 20px 0;
+}
+
+div.posts:not(:last-child){
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+div.posts p{
+  font-size: 0.8em;
+  margin: 10px 0 20px;
+}
+
+div.posts img{
+  float: left;
+  max-width: 10%;
+  margin: 0 10px 10px 0;
+}
+
+div.posts:after{
+  content: ".";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+}
+
+
+/*left side content end*/
+
+
+
+/*right side content*/
+#right-container{
+  width: 33%;
+}
+
+div#imageWeek{
+  border-bottom: 2px solid rgb(204, 204, 204);
+  margin-bottom:20px;
+}
+
+#right-container img{
+    width: 100%;
+    padding: 5px 0;
+}
+
+#right-container div h4{
+  color: rgb(36, 140, 254);
+}
+
+.content-cont{
+  display: inline-block;
+  height: 100%;
+  background: white;
+  padding: 20px;
+  margin: 0;
+  border-radius: 5px;
+
+}
+
+.content-cont button{
+  padding: 10px;
+  background: rgb(57, 149, 255) ;
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  border:0;
+}
+
+button#picture{
+  margin-bottom: 20px;
+}
+
+#quoteWeek div{
+  border-left: 4px solid black;
+}
+
+p#qWeek{
+  margin-top: 20px;
+  padding-left: 10px;
+}
+
+p#qAuthor{
+  margin-top: 10px;
+  font-size: 0.8em;
+  font-style: italic;
+  padding-left: 10px;
+}
+
+button#quote{
+  margin: 20px 0 0;
+}
+
+/*right content end */
+
+/*contents end*/
+
+
+
+
+@media screen and (max-width: 800px){
+  #left-container, #right-container{
+    width:100%;
+    margin-bottom: 10px;
+  }
+
+  h1{
+    font-size: 1.3em;
+  }
+  li{
+    text-align: center;
+    display:block;
+  }
+}
